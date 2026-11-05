@@ -1,0 +1,29 @@
+# ===================================================================
+# 国内补充域名 —— 单一源文件，Clash / Surge 原生语法
+# 由 scripts/build.py 自动转译为 Quantumult X 语法
+# 改这一个文件，两端同时生效
+# ===================================================================
+# --- 自有业务 ---
+host-suffix, oakridge-ai.com, direct
+# --- 基础设施 / 连通性检测 ---
+host-suffix, baidu.com, direct
+host-suffix, bdstatic.com, direct
+host-suffix, qq.com, direct
+host-suffix, gtimg.com, direct
+host-suffix, taobao.com, direct
+host-suffix, alicdn.com, direct
+host-suffix, jd.com, direct
+host-suffix, bilibili.com, direct
+host-suffix, hdslb.com, direct
+host-suffix, zhihu.com, direct
+host-suffix, csdn.net, direct
+host-suffix, aliyun.com, direct
+host-suffix, aliyuncs.com, direct
+host-suffix, myqcloud.com, direct
+host-suffix, tencentcloudapi.com, direct
+# --- 内网穿透 / 自建服务 ---
+host-suffix, oray.com, direct
+host-suffix, frp.example.com, direct
+# --- 国内 NTP / 系统服务 ---
+host-suffix, ntp.org.cn, direct
+host-suffix, cn.pool.ntp.org, direct

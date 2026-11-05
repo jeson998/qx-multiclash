@@ -1,0 +1,33 @@
+# ===================================================================
+# 国内补充域名 —— 单一源文件，Clash / Surge 原生语法
+# 由 scripts/build.py 自动转译为 Quantumult X 语法
+# 改这一个文件，两端同时生效
+# ===================================================================
+
+# --- 自有业务 ---
+DOMAIN-SUFFIX,oakridge-ai.com,DIRECT
+
+# --- 基础设施 / 连通性检测 ---
+DOMAIN-SUFFIX,baidu.com,DIRECT
+DOMAIN-SUFFIX,bdstatic.com,DIRECT
+DOMAIN-SUFFIX,qq.com,DIRECT
+DOMAIN-SUFFIX,gtimg.com,DIRECT
+DOMAIN-SUFFIX,taobao.com,DIRECT
+DOMAIN-SUFFIX,alicdn.com,DIRECT
+DOMAIN-SUFFIX,jd.com,DIRECT
+DOMAIN-SUFFIX,bilibili.com,DIRECT
+DOMAIN-SUFFIX,hdslb.com,DIRECT
+DOMAIN-SUFFIX,zhihu.com,DIRECT
+DOMAIN-SUFFIX,csdn.net,DIRECT
+DOMAIN-SUFFIX,aliyun.com,DIRECT
+DOMAIN-SUFFIX,aliyuncs.com,DIRECT
+DOMAIN-SUFFIX,myqcloud.com,DIRECT
+DOMAIN-SUFFIX,tencentcloudapi.com,DIRECT
+
+# --- 内网穿透 / 自建服务 ---
+DOMAIN-SUFFIX,oray.com,DIRECT
+DOMAIN-SUFFIX,frp.example.com,DIRECT
+
+# --- 国内 NTP / 系统服务 ---
+DOMAIN-SUFFIX,ntp.org.cn,DIRECT
+DOMAIN-SUFFIX,cn.pool.ntp.org,DIRECT

@@ -1,0 +1,36 @@
+name: build-rules
+
+on:
+  schedule:
+    - cron: "0 4 * * *"      # 每天 04:00 UTC = 12:00 CST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 转换自维护规则
+        run: python scripts/build.py
+
+      - name: 拉取上游国内规则并转 QX
+        run: |
+          mkdir -p dist/upstream
+          B=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX
+          curl -fsSL "$B/ChinaMax/ChinaMax.list"  -o dist/upstream/cn-domain.list
+          curl -fsSL "$B/ChinaIPs/ChinaIPs.list"  -o dist/upstream/cn-ip.list
+          curl -fsSL "$B/Advertising/Advertising.list" -o dist/upstream/ad.list
+
+      - name: 提交产物
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: rebuild rules"
+          file_pattern: "dist/**"

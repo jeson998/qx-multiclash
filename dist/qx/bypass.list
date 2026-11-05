@@ -1,0 +1,39 @@
+# ===================================================================
+# 必须直连、禁止走代理 —— 银行 / 支付 / 风控敏感
+# 这些 App 会检测代理，全部强制 DIRECT
+# ===================================================================
+# --- 微信 / 支付宝 ---
+host-suffix, weixin.qq.com, direct
+host-suffix, wechat.com, direct
+host-suffix, tenpay.com, direct
+host-suffix, alipay.com, direct
+host-suffix, alipayobjects.com, direct
+host-suffix, mysql.alipay.com, direct
+# --- 银联 ---
+host-suffix, unionpay.com, direct
+host-suffix, 95516.com, direct
+# --- 银行 ---
+host-suffix, icbc.com.cn, direct
+host-suffix, ccb.com, direct
+host-suffix, abchina.com, direct
+host-suffix, boc.cn, direct
+host-suffix, bankofchina.com, direct
+host-suffix, cmbchina.com, direct
+host-suffix, bankcomm.com, direct
+host-suffix, spdb.com.cn, direct
+host-suffix, psbc.com, direct
+host-suffix, cebbank.com, direct
+host-suffix, citicbank.com, direct
+host-suffix, cmbc.com.cn, direct
+host-suffix, cib.com.cn, direct
+host-suffix, pingan.com, direct
+host-suffix, pab.com.cn, direct
+host-suffix, hsbank.com.cn, direct
+# --- 券商 / 基金 ---
+host-suffix, htsc.com.cn, direct
+host-suffix, citics.com.cn, direct
+host-suffix, gtja.com, direct
+host-suffix, eastmoney.com, direct
+# --- 政务 / 实名 ---
+host-suffix, chinatax.gov.cn, direct
+host-suffix, 12306.cn, direct

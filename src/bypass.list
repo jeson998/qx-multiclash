@@ -1,0 +1,44 @@
+# ===================================================================
+# 必须直连、禁止走代理 —— 银行 / 支付 / 风控敏感
+# 这些 App 会检测代理，全部强制 DIRECT
+# ===================================================================
+
+# --- 微信 / 支付宝 ---
+DOMAIN-SUFFIX,weixin.qq.com,DIRECT
+DOMAIN-SUFFIX,wechat.com,DIRECT
+DOMAIN-SUFFIX,tenpay.com,DIRECT
+DOMAIN-SUFFIX,alipay.com,DIRECT
+DOMAIN-SUFFIX,alipayobjects.com,DIRECT
+DOMAIN-SUFFIX,mysql.alipay.com,DIRECT
+
+# --- 银联 ---
+DOMAIN-SUFFIX,unionpay.com,DIRECT
+DOMAIN-SUFFIX,95516.com,DIRECT
+
+# --- 银行 ---
+DOMAIN-SUFFIX,icbc.com.cn,DIRECT
+DOMAIN-SUFFIX,ccb.com,DIRECT
+DOMAIN-SUFFIX,abchina.com,DIRECT
+DOMAIN-SUFFIX,boc.cn,DIRECT
+DOMAIN-SUFFIX,bankofchina.com,DIRECT
+DOMAIN-SUFFIX,cmbchina.com,DIRECT
+DOMAIN-SUFFIX,bankcomm.com,DIRECT
+DOMAIN-SUFFIX,spdb.com.cn,DIRECT
+DOMAIN-SUFFIX,psbc.com,DIRECT
+DOMAIN-SUFFIX,cebbank.com,DIRECT
+DOMAIN-SUFFIX,citicbank.com,DIRECT
+DOMAIN-SUFFIX,cmbc.com.cn,DIRECT
+DOMAIN-SUFFIX,cib.com.cn,DIRECT
+DOMAIN-SUFFIX,pingan.com,DIRECT
+DOMAIN-SUFFIX,pab.com.cn,DIRECT
+DOMAIN-SUFFIX,hsbank.com.cn,DIRECT
+
+# --- 券商 / 基金 ---
+DOMAIN-SUFFIX,htsc.com.cn,DIRECT
+DOMAIN-SUFFIX,citics.com.cn,DIRECT
+DOMAIN-SUFFIX,gtja.com,DIRECT
+DOMAIN-SUFFIX,eastmoney.com,DIRECT
+
+# --- 政务 / 实名 ---
+DOMAIN-SUFFIX,chinatax.gov.cn,DIRECT
+DOMAIN-SUFFIX,12306.cn,DIRECT

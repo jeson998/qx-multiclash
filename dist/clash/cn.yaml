@@ -1,0 +1,23 @@
+# rule-provider: cn
+# 由 scripts/build.py 自动生成，请勿直接编辑
+payload:
+  - 'DOMAIN-SUFFIX,oakridge-ai.com,DIRECT'
+  - 'DOMAIN-SUFFIX,baidu.com,DIRECT'
+  - 'DOMAIN-SUFFIX,bdstatic.com,DIRECT'
+  - 'DOMAIN-SUFFIX,qq.com,DIRECT'
+  - 'DOMAIN-SUFFIX,gtimg.com,DIRECT'
+  - 'DOMAIN-SUFFIX,taobao.com,DIRECT'
+  - 'DOMAIN-SUFFIX,alicdn.com,DIRECT'
+  - 'DOMAIN-SUFFIX,jd.com,DIRECT'
+  - 'DOMAIN-SUFFIX,bilibili.com,DIRECT'
+  - 'DOMAIN-SUFFIX,hdslb.com,DIRECT'
+  - 'DOMAIN-SUFFIX,zhihu.com,DIRECT'
+  - 'DOMAIN-SUFFIX,csdn.net,DIRECT'
+  - 'DOMAIN-SUFFIX,aliyun.com,DIRECT'
+  - 'DOMAIN-SUFFIX,aliyuncs.com,DIRECT'
+  - 'DOMAIN-SUFFIX,myqcloud.com,DIRECT'
+  - 'DOMAIN-SUFFIX,tencentcloudapi.com,DIRECT'
+  - 'DOMAIN-SUFFIX,oray.com,DIRECT'
+  - 'DOMAIN-SUFFIX,frp.example.com,DIRECT'
+  - 'DOMAIN-SUFFIX,ntp.org.cn,DIRECT'
+  - 'DOMAIN-SUFFIX,cn.pool.ntp.org,DIRECT'

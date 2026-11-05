@@ -1,0 +1,82 @@
+# ===================================================================
+# Clash / mihomo 配置模板
+# 把 jeson998/qx-multiclash 换成你自己的 GitHub 账号和仓库名
+# ===================================================================
+
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  fallback:
+    - tls://8.8.8.8:853
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+
+proxies:
+  # 节点写这里，或用 proxy-providers 引订阅
+
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - AUTO
+      - DIRECT
+  - name: AUTO
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - DIRECT
+
+# -------------------------------------------------------------------
+# 规则提供者：与 QX 共用同一份 src/*.list 转译产物
+# -------------------------------------------------------------------
+rule-providers:
+  cn:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/jeson998/qx-multiclash/main/dist/clash/cn.yaml
+    path: ./ruleset/cn.yaml
+    interval: 86400
+  proxy:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/jeson998/qx-multiclash/main/dist/clash/proxy.yaml
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  bypass:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/jeson998/qx-multiclash/main/dist/clash/bypass.yaml
+    path: ./ruleset/bypass.yaml
+    interval: 86400
+
+rules:
+  # 局域网直连
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+
+  # 风控敏感，最先匹配
+  - RULE-SET,bypass,DIRECT
+  # 代理白名单
+  - RULE-SET,proxy,PROXY
+  # 国内自维护
+  - RULE-SET,cn,DIRECT
+
+  # 兜底
+  - GEOIP,CN,DIRECT
+  - MATCH,PROXY

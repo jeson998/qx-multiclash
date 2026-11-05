@@ -1,0 +1,31 @@
+# ===================================================================
+# 需要走代理的域名 —— 单一源文件，Clash / Surge 原生语法
+# ===================================================================
+# --- AI 服务 ---
+host-suffix, openai.com, proxy
+host-suffix, chatgpt.com, proxy
+host-suffix, anthropic.com, proxy
+host-suffix, claude.ai, proxy
+host-suffix, gemini.google.com, proxy
+# --- 开发 / 代码托管 ---
+host-suffix, github.com, proxy
+host-suffix, githubusercontent.com, proxy
+host-suffix, githubassets.com, proxy
+host-suffix, ghcr.io, proxy
+host-suffix, npmjs.com, proxy
+host-suffix, npmjs.org, proxy
+# --- 搜索 / 媒体 ---
+host-suffix, google.com, proxy
+host-suffix, googleapis.com, proxy
+host-suffix, gstatic.com, proxy
+host-suffix, youtube.com, proxy
+host-suffix, googlevideo.com, proxy
+host-suffix, x.com, proxy
+host-suffix, twitter.com, proxy
+host-suffix, telegram.org, proxy
+host-suffix, t.me, proxy
+# --- 工具 / 同步 ---
+host-suffix, dropbox.com, proxy
+host-suffix, notion.so, proxy
+host-suffix, vercel.app, proxy
+host-suffix, jsdelivr.net, proxy

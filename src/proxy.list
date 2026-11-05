@@ -1,0 +1,35 @@
+# ===================================================================
+# 需要走代理的域名 —— 单一源文件，Clash / Surge 原生语法
+# ===================================================================
+
+# --- AI 服务 ---
+DOMAIN-SUFFIX,openai.com,PROXY
+DOMAIN-SUFFIX,chatgpt.com,PROXY
+DOMAIN-SUFFIX,anthropic.com,PROXY
+DOMAIN-SUFFIX,claude.ai,PROXY
+DOMAIN-SUFFIX,gemini.google.com,PROXY
+
+# --- 开发 / 代码托管 ---
+DOMAIN-SUFFIX,github.com,PROXY
+DOMAIN-SUFFIX,githubusercontent.com,PROXY
+DOMAIN-SUFFIX,githubassets.com,PROXY
+DOMAIN-SUFFIX,ghcr.io,PROXY
+DOMAIN-SUFFIX,npmjs.com,PROXY
+DOMAIN-SUFFIX,npmjs.org,PROXY
+
+# --- 搜索 / 媒体 ---
+DOMAIN-SUFFIX,google.com,PROXY
+DOMAIN-SUFFIX,googleapis.com,PROXY
+DOMAIN-SUFFIX,gstatic.com,PROXY
+DOMAIN-SUFFIX,youtube.com,PROXY
+DOMAIN-SUFFIX,googlevideo.com,PROXY
+DOMAIN-SUFFIX,x.com,PROXY
+DOMAIN-SUFFIX,twitter.com,PROXY
+DOMAIN-SUFFIX,telegram.org,PROXY
+DOMAIN-SUFFIX,t.me,PROXY
+
+# --- 工具 / 同步 ---
+DOMAIN-SUFFIX,dropbox.com,PROXY
+DOMAIN-SUFFIX,notion.so,PROXY
+DOMAIN-SUFFIX,vercel.app,PROXY
+DOMAIN-SUFFIX,jsdelivr.net,PROXY

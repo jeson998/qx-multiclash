@@ -1,0 +1,20 @@
+# 本地私有配置，绝不提交
+local/
+*.local
+*.local.conf
+*.local.yaml
+subscription*.txt
+.env
+
+# 客户端运行时产物
+ruleset/
+*.mmdb
+*.log
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
