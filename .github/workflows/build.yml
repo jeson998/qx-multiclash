@@ -12,9 +12,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.11"
 
@@ -30,7 +30,7 @@ jobs:
           curl -fsSL "$B/Advertising/Advertising.list" -o dist/upstream/ad.list
 
       - name: 提交产物
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "chore: rebuild rules"
           file_pattern: "dist/**"
